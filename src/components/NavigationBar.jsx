@@ -24,7 +24,14 @@ function NavigationBar({ darkMode, setDarkMode }) {
                 <a href="#achievements" className='menu-circle'>Achievements</a>
             </nav>
 
-            
+            <div className='nav-right'>
+                <a href="https://github.com/khushi23-crypto" className={`github-link ${darkMode ? "dark" : "light"}`} target="_blank" rel="noopener noreferrer">
+                    <FaGithub className="github-icon" />
+                </a>
+
+
+                <button variant={darkMode ? "light" : "dark"} onClick={toggleTheme} className="theme-icon" > {darkMode ? <FaMoon /> : <FaSun />} </button>
+            </div>
             <div className="nav-connect">
                 Connect With Me
             </div>
