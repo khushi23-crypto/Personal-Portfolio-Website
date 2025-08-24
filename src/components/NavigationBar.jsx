@@ -1,6 +1,14 @@
 import React from 'react'
 import './NavigationBar.css'
 import { FaGithub, FaSun, FaMoon } from "react-icons/fa";
+import { IoHomeSharp } from "react-icons/io5";
+import { SiGoogledocs } from "react-icons/si";
+import { BiSolidContact } from "react-icons/bi";
+import { FaProjectDiagram } from "react-icons/fa";
+import { FaTools } from "react-icons/fa";
+import { FaTrophy } from "react-icons/fa";
+import { FaCodeBranch } from "react-icons/fa";
+
 
 function NavigationBar({ darkMode, setDarkMode }) {
     const toggleTheme = () => {
@@ -16,12 +24,13 @@ function NavigationBar({ darkMode, setDarkMode }) {
             </div>
 
             <nav className={`nav-menu ${darkMode ? "dark" : "light"}`}>
-                <a href="#home" className='menu-circle'>Home</a>
-                <a href="#opensource" className='menu-circle'>Open Source</a>
-                <a href="#skills" className='menu-circle'>Skills</a>
-                <a href="#projects" className='menu-circle'>Projects</a>
-                <a href="#resume" className='menu-circle'>Resume</a>
-                <a href="#achievements" className='menu-circle'>Achievements</a>
+                <a href="#home" className='menu-circle'><IoHomeSharp /> &nbsp;Home</a>
+                <a href="https://github.com/khushi23-crypto/" className='menu-circle'><FaCodeBranch />&nbsp;Open Source</a>
+                <a href="#skills" className='menu-circle'><FaTools />&nbsp;Skills</a>
+                <a href="#projects" className='menu-circle'><FaProjectDiagram />&nbsp;Projects</a>
+                <a href="#resume" className='menu-circle'><SiGoogledocs />&nbsp;Resume</a>
+                <a href="#achievements" className='menu-circle'><FaTrophy />&nbsp;Achievements</a>
+                <a href="#contact" className='menu-circle'><BiSolidContact />&nbsp;Contact</a>
             </nav>
 
             <div className='nav-right'>
@@ -30,11 +39,13 @@ function NavigationBar({ darkMode, setDarkMode }) {
                 </a>
 
 
-                <button variant={darkMode ? "light" : "dark"} onClick={toggleTheme} className="theme-icon" > {darkMode ? <FaMoon /> : <FaSun />} </button>
+                <div className={`theme-toggle ${darkMode ? "dark" : ""}`} onClick={toggleTheme}>
+                    <div className="toggle-thumb">
+                        {darkMode ? <FaMoon size={16} /> : <FaSun size={16} />}
+                    </div>
+                </div>
             </div>
-            <div className="nav-connect">
-                Connect With Me
-            </div>
+            
         </header>
     )
 }

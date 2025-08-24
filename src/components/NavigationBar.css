@@ -3,18 +3,24 @@
   align-items: center;
   padding: 10px 20px;
   margin: 0;
+  position: fixed;  /* make it stick to top */
+  top: 0;            /* top of viewport */
+  left: 0;
+  width: 100%;       /* full width */
+  z-index: 999;      /* stay above other content */
+  transition: background-color 0.3s ease;
 }
 .navbar.light {
-  background-color: #fff;
+  background-color: #f5eae6;
 }
 .navbar.dark {
-  background-color: #330246;
+  background-color: #080327;
 }
 .nav-menu {
-  font-weight: 500;
+  font-weight: 400;
   display: flex;
-  gap: 60px;
-  font-size: 20px;
+  gap: 40px;
+  font-size: 16px;
   flex: 1;
   justify-content: center;
   cursor: pointer;
@@ -26,13 +32,20 @@
 .nav-menu.light a {
   color: white;
 }
+.menu-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 10px; /* keep same as hover */
+  border-radius: 50px; /* same as hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
 .menu-circle:hover {
   transform: scale(1.05);
   background: linear-gradient(267deg, #b923f1 0.36%, #da7c25 102.06%);
   box-shadow: 0 4px 15px rgba(185, 35, 241, 0.6),
     0 0 15px rgba(218, 124, 37, 0.5);
-  padding: 10px 20px;
-  border-radius: 50px;
+  
 }
 
 .nav-menu a:hover::before {
@@ -111,20 +124,40 @@
   color: #333;
 }
 
-.theme-icon {
-  border-radius: 30px;
-  font-size: 25px;
-}
-.nav-connect {
-  padding: 20px 40px;
+.theme-toggle {
+  width: 50px;
+  height: 26px;
+  background: linear-gradient(135deg, #DA7C25, #B923F1);
   border-radius: 50px;
-  background: linear-gradient(267deg, #da7c25 0.36%, #b923f1 102.06%);
-  font-size: 15px;
+  padding: 3px;
   cursor: pointer;
-  transition: 0.5s;
-  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  transition: background 0.4s ease;
+  position: relative;
 }
-.nav-connect:hover {
-  transform: scale(1.05);
-  background: linear-gradient(267deg, #b923f1 0.36%, #da7c25 102.06%);
+
+.theme-toggle.dark {
+  background: linear-gradient(135deg, #444, #111);
 }
+
+.toggle-thumb {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease;
+}
+
+.theme-toggle.dark .toggle-thumb {
+  transform: translateX(24px); /* moves thumb to right in dark mode */
+}
+
+.theme-toggle:hover {
+  filter: brightness(1.1);
+}
+
+

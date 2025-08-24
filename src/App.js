@@ -1,3 +1,4 @@
+import Header from './components/Header/Header';
 import NavigationBar from './components/NavigationBar';
 import { React, useState } from 'react';
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <NavigationBar darkMode={darkMode}
       setDarkMode={setDarkMode} />
+      <Header darkMode={darkMode}/>
     </div>
   );
 }
