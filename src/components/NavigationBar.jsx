@@ -1,36 +1,31 @@
-import React, { useState } from 'react'
+import React from 'react'
+import './NavigationBar.css'
+import { FaGithub, FaSun, FaMoon } from "react-icons/fa";
 
-import {Navbar,Container,Nav} from 'react-bootstrap';
-function NavigationBar() {
-  return (
-    <div>
-        <Navbar expand="lg">
-      <Container>
-        <Navbar.Brand href="#home">
-            <img src={} alt="Logo"/>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" >
-            <span className='nvbar-toggle-icon'></span>
-        </Navbar.Toggle>
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#skill">Skills</Nav.Link>
-            <Nav.Link href="#projects">Projects</Nav.Link>
-          </Nav>
-          <span className='navbar-text'>
-            <div className='social-icon'>
-                <a href='#'><img src={} alt=""/></a>
-                <a href='#'><img src={} alt=""/></a>
-                <a href='#'><img src={} alt=""/></a>
+function NavigationBar({ darkMode, setDarkMode }) {
+   
+    return (
+        <header className={`navbar ${darkMode ? "light" : "dark"}`} >
+            <div className="logo-container">
+                <div className="logo-circle"><span>K</span></div>
+                <div className="logo-s">S</div>
             </div>
-            <button className='vvd' onClick={()=> console.log('connect')}><span>Let's Connect</span></button>
-          </span>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-    </div>
-  )
+
+            <nav className={`nav-menu ${darkMode ? "dark" : "light"}`}>
+                <a href="#home" className='menu-circle'>Home</a>
+                <a href="#opensource" className='menu-circle'>Open Source</a>
+                <a href="#skills" className='menu-circle'>Skills</a>
+                <a href="#projects" className='menu-circle'>Projects</a>
+                <a href="#resume" className='menu-circle'>Resume</a>
+                <a href="#achievements" className='menu-circle'>Achievements</a>
+            </nav>
+
+            
+            <div className="nav-connect">
+                Connect With Me
+            </div>
+        </header>
+    )
 }
 
 export default NavigationBar

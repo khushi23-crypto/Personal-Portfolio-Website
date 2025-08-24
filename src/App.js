@@ -1,11 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
 import NavigationBar from './components/NavigationBar';
-
+import { React, useState } from 'react';
 function App() {
+    const [darkMode, setDarkMode] = useState(false);
+
   return (
     <div className="App">
-      <NavigationBar/>
+      <NavigationBar darkMode={darkMode}
+      setDarkMode={setDarkMode} />
     </div>
   );
 }
