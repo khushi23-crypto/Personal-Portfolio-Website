@@ -6,7 +6,14 @@ import { motion, AnimatePresence } from "framer-motion";
 
 function Header({ darkMode }) {
   
-
+const texts = ["Frontend Developer", "Web Developer", "React Developer"]
+  const [currentText, setCurrentText] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentText((prev) => (prev + 1) % texts.length);
+    }, 2000); // change every 2 seconds
+    return () => clearInterval(interval);
+  }, []);
   return (
     <>
       <header className={`header ${darkMode ? 'header-light' : 'header-dark'}`}>
