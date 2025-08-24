@@ -3,7 +3,11 @@ import './NavigationBar.css'
 import { FaGithub, FaSun, FaMoon } from "react-icons/fa";
 
 function NavigationBar({ darkMode, setDarkMode }) {
-   
+    const toggleTheme = () => {
+        setDarkMode(!darkMode);
+        document.body.classList.toggle("bg-dark");
+        document.body.classList.toggle("text-light");
+    };
     return (
         <header className={`navbar ${darkMode ? "light" : "dark"}`} >
             <div className="logo-container">
