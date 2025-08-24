@@ -1,0 +1,130 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 0;
+}
+.navbar.light {
+  background-color: #fff;
+}
+.navbar.dark {
+  background-color: #330246;
+}
+.nav-menu {
+  font-weight: 500;
+  display: flex;
+  gap: 60px;
+  font-size: 20px;
+  flex: 1;
+  justify-content: center;
+  cursor: pointer;
+  perspective: 500px;
+}
+.nav-menu.dark a {
+  color: black;
+}
+.nav-menu.light a {
+  color: white;
+}
+.menu-circle:hover {
+  transform: scale(1.05);
+  background: linear-gradient(267deg, #b923f1 0.36%, #da7c25 102.06%);
+  box-shadow: 0 4px 15px rgba(185, 35, 241, 0.6),
+    0 0 15px rgba(218, 124, 37, 0.5);
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+.nav-menu a:hover::before {
+  width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  perspective: 500px; /* for subtle 3D effect */
+}
+
+.logo-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #da7c25, #b923f1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(218, 124, 37, 0.6),
+    0 0 15px rgba(185, 35, 241, 0.5);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.logo-circle span {
+  color: white;
+  font-weight: 800;
+  font-size: 28px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.logo-s {
+  font-weight: 800;
+  font-size: 28px;
+  background: linear-gradient(135deg, #da7c25, #b923f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s;
+}
+
+.logo-container:hover .logo-circle {
+  transform: rotate(15deg) scale(1.1);
+  box-shadow: 0 6px 20px rgba(218, 124, 37, 0.8),
+    0 0 20px rgba(185, 35, 241, 0.7);
+}
+
+.logo-container:hover .logo-s {
+  transform: scale(1.15) translateY(-2px);
+}
+
+.github-icon {
+  font-size: 30px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.github-link {
+  color: #fff; /* ya jo bhi chahiye */
+  transition: transform 0.3s ease, color 0.3s ease;
+  font-size: 40px;
+}
+.github-link.dark {
+  color: #000; /* dark mode color */
+}
+
+.github-link:hover {
+  transform: scale(1.2);
+  color: #333;
+}
+
+.theme-icon {
+  border-radius: 30px;
+  font-size: 25px;
+}
+.nav-connect {
+  padding: 20px 40px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #da7c25 0.36%, #b923f1 102.06%);
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-left: 20px;
+}
+.nav-connect:hover {
+  transform: scale(1.05);
+  background: linear-gradient(267deg, #b923f1 0.36%, #da7c25 102.06%);
+}
