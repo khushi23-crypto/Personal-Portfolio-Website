@@ -5,8 +5,8 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 
 function Header({ darkMode }) {
-  
-const texts = ["Frontend Developer", "Web Developer", "React Developer"]
+
+  const texts = ["Frontend Developer", "Web Developer", "React Developer"]
   const [currentText, setCurrentText] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
@@ -21,7 +21,7 @@ const texts = ["Frontend Developer", "Web Developer", "React Developer"]
           <h1 className="fancy-name">𝒦𝒶𝒿𝒶𝓁 𝒮𝒶𝒾𝓃𝒾</h1>
           <img src={Photo} alt='photo' className='profile-pic' />
         </div>
-        <div className={`rightside ${darkMode ? 'rightside-light' : 'rightside-dark'}`}>
+        <div className='rightside'>
           <div className='home'>Hi!,  I'm
             <span className='name'> Kajal Saini </span>
           </div>
@@ -47,10 +47,8 @@ const texts = ["Frontend Developer", "Web Developer", "React Developer"]
               |
             </motion.span>
           </div>
-
-
           <div>
-            <p className='myself'>I'm a passionate Web Designer and Developer with a strong foundation in creating modern, responsive, and user-friendly websites. Currently, I’m pursuing my Bachelor of Technology in Information Technology at Rajkiya Engineering College, Azamgarh (2022-2026). I specialize in building interactive web applications using modern technologies such as React, Next.js, TypeScript, and JavaScript.My goal is to create web experiences that are both visually appealing and technically robust.</p>
+            <p className='myself'>I'm a passionate Web Designer and Developer with a strong foundation in creating modern, responsive, and user-friendly websites. Currently, I’m pursuing my Bachelor of Technology in Information Technology at Rajkiya Engineering College, Azamgarh (2022-2026).</p>
           </div>
           <div className="flex">
             <a href='#resume' className={`openresume ${darkMode ? 'openresume-light' : 'openresume-dark'}`}>
@@ -59,10 +57,8 @@ const texts = ["Frontend Developer", "Web Developer", "React Developer"]
             <div className={`nav-connect ${darkMode ? 'nav-connect-light' : 'nav-connect-dark'}`}>
               Connect With Me
             </div>
-
           </div>
         </div>
-
       </header >
     </>
   )

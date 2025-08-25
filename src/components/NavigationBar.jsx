@@ -8,6 +8,7 @@ import { FaProjectDiagram } from "react-icons/fa";
 import { FaTools } from "react-icons/fa";
 import { FaTrophy } from "react-icons/fa";
 import { FaCodeBranch } from "react-icons/fa";
+import { FiInfo } from "react-icons/fi";
 
 
 function NavigationBar({ darkMode, setDarkMode }) {
@@ -30,6 +31,7 @@ function NavigationBar({ darkMode, setDarkMode }) {
                 <a href="#projects" className='menu-circle'><FaProjectDiagram />&nbsp;Projects</a>
                 <a href="#resume" className='menu-circle'><SiGoogledocs />&nbsp;Resume</a>
                 <a href="#achievements" className='menu-circle'><FaTrophy />&nbsp;Achievements</a>
+                <a href="#about" className='menu-circle'><FiInfo /> &nbsp;About</a>
                 <a href="#contact" className='menu-circle'><BiSolidContact />&nbsp;Contact</a>
             </nav>
 
