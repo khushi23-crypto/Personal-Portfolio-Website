@@ -9,6 +9,7 @@ import { FaTools } from "react-icons/fa";
 import { FaTrophy } from "react-icons/fa";
 import { FaCodeBranch } from "react-icons/fa";
 import { FiInfo } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 
 function NavigationBar({ darkMode, setDarkMode }) {
@@ -25,20 +26,20 @@ function NavigationBar({ darkMode, setDarkMode }) {
             </div>
 
             <nav className={`nav-menu ${darkMode ? "dark" : "light"}`}>
-                <a href="#home" className='menu-circle'><IoHomeSharp /> &nbsp;Home</a>
-                <a href="https://github.com/khushi23-crypto/" className='menu-circle'><FaCodeBranch />&nbsp;Open Source</a>
-                <a href="#skills" className='menu-circle'><FaTools />&nbsp;Skills</a>
-                <a href="#projects" className='menu-circle'><FaProjectDiagram />&nbsp;Projects</a>
-                <a href="#resume" className='menu-circle'><SiGoogledocs />&nbsp;Resume</a>
-                <a href="#achievements" className='menu-circle'><FaTrophy />&nbsp;Achievements</a>
-                <a href="#about" className='menu-circle'><FiInfo /> &nbsp;About</a>
-                <a href="#contact" className='menu-circle'><BiSolidContact />&nbsp;Contact</a>
+                <Link to="/home" className='menu-circle'><IoHomeSharp /> &nbsp;Home</Link>
+                <Link to="https://github.com/khushi23-crypto/" className='menu-circle'><FaCodeBranch />&nbsp;Open Source</Link>
+                <Link to="/skills" className='menu-circle'><FaTools />&nbsp;Skills</Link>
+                <Link to="/projects" className='menu-circle'><FaProjectDiagram />&nbsp;Projects</Link>
+                <Link to="/resume" className='menu-circle'><SiGoogledocs />&nbsp;Resume</Link>
+                <Link to="/achievements" className='menu-circle'><FaTrophy />&nbsp;Achievements</Link>
+                <Link to="/about" className='menu-circle'><FiInfo /> &nbsp;About</Link>
+                <Link to="/contact" className='menu-circle'><BiSolidContact />&nbsp;Contact</Link>
             </nav>
 
             <div className='nav-right'>
-                <a href="https://github.com/khushi23-crypto" className={`github-link ${darkMode ? "dark" : "light"}`} target="_blank" rel="noopener noreferrer">
+                <Link to="https://github.com/khushi23-crypto" className={`github-link ${darkMode ? "dark" : "light"}`} target="_blank" rel="noopener noreferrer">
                     <FaGithub className="github-icon" />
-                </a>
+                </Link>
 
 
                 <div className={`theme-toggle ${darkMode ? "dark" : ""}`} onClick={toggleTheme}>

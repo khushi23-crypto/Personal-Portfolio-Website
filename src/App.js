@@ -2,23 +2,26 @@ import About from './components/About/About';
 import Header from './components/Header/Header';
 import NavigationBar from './components/NavigationBar';
 import { React, useState } from 'react';
-import { Fragment } from "react";
 import Scrollbutton from "./components/Scrollbutton";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 function App() {
     const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <Fragment>
-    <div className="App">
+    <Router>
+  
+    
       <NavigationBar darkMode={darkMode}
       setDarkMode={setDarkMode} />
-      <Header darkMode={darkMode}/>
-      <About darkMode={darkMode}/>
+      <Routes>
+      <Route path="/home" element={<Header darkMode={darkMode}/>}/>
+      <Route path="/about" element={<About darkMode={darkMode}/>}/>
+      
+      </Routes>
       <Scrollbutton/>
-    </div>
-    </Fragment>
+    </Router>
   );
 }
 
