@@ -117,7 +117,20 @@ function Project({ darkMode }) {
 
                     </div>
                 </div>
-                
+                <div className="project-card">
+                    <div className="project-body">
+                        <div className="img-wrapper">
+                            <img src={Jobboard} alt="chatbot" className='project-img' />
+                            <div className="eye-overlay">
+                                <a href="https://job-board-w873.vercel.app/"><FaEye className='eye-icon' /></a>
+                            </div>
+                        </div>
+                        <h3 className='about-project'>Jobboard website Using Next.js</h3>
+                        <p></p>
+                        <p className='paragraph'>A modern job listing platform that allows users to browse, search, and apply for job opportunities seamlessly.</p>
+                        <a href="https://job-board-w873.vercel.app/" className='live-demo'>Live Demo</a>
+                    </div>
+                </div>
             </div >
         </div >
     )
