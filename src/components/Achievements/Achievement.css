@@ -1,0 +1,72 @@
+.experience{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 50px;
+  min-height: 100vh;
+  justify-content: flex-start; /* <-- move content to top */
+  gap: 40px; /* space between name and photo */
+  padding-top: 70px;
+}
+.experience-light{
+  background-color: white;
+  color: #000;
+}
+.experience-dark{
+  background-color: #08012c;
+  color: white;
+}
+.feedback{
+  font-size: 50px;
+  font-weight: 800;
+  gap: 40px;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;            /* small screen pe cards wrap ho jaye */
+  gap: 20px;
+  justify-content: center;    /* row center me align ho */
+}
+
+.card-dark{
+  background-color: #08012c;
+  color: white;
+}
+.card-light{
+  background-color: white;
+  color: #000;
+}
+
+.card {
+  width: 350px;
+  height: 350px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid white;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.card-text {
+  font-size: 17px;
+  margin-top: 50px;
+}
+.company{
+  margin-top: 20px;
+}
+.color{
+  color: rgb(250, 6, 197);
+}
