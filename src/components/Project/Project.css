@@ -1,0 +1,101 @@
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 50px;
+  min-height: 100vh;
+  justify-content: flex-start; /* <-- move content to top */
+  gap: 40px; /* space between name and photo */
+  padding-top: 70px;
+}
+.project-dark {
+  background-color: #08012c;
+  color: white;
+}
+.project-light {
+  background-color: #fff;
+  color: black;
+}
+.project-heading{
+    font-size: 50px;
+    color: rgb(250, 6, 197);
+    font-weight: 800;
+}
+.p-para{
+    font-size: 26px;
+    font-weight: 500;
+}
+.project-container{
+  display: flex;
+  flex-wrap: wrap;            /* small screen pe cards wrap ho jaye */
+  gap: 20px;
+  justify-content: center;
+}
+.project-card{
+  width: 350px;
+  height: 350px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid white;
+}
+.project-card:hover{
+    transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+.project-body{
+    padding: 7px;
+}
+.project-img{
+    width: 335px;
+    height: 200px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+.eye-overlay{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.35);
+    opacity: 0;
+    transform: translate(6px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    pointer-events: none;
+
+}
+.eye-icon{
+    font-size: 28px;
+    color: #fff;
+    transform: scale(1);
+    transition: tranform 0.2s ease;
+}
+.img-wrapper{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.about-project{
+    font-size: 18px;
+}
+.img-wrapper:hover .eye-overlay{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.img-wrapper:hover .project-img{
+    transform: scale(1.05);
+}
+.img-wrapper:hover .eye-icon{
+    transform: scale(1.12);
+}
+.paragraph{
+    font-size: 15px;
+}
+.live-demo{
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(31, 206, 250);
+}
