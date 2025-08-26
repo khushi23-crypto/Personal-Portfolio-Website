@@ -126,6 +126,7 @@
   transition: 0.5s;
   margin-left: 20px;
   border: rgb(20, 231, 231) 3px solid;
+  color: white;
   transition: transform 0.3s ease, background 0.3s ease;
 }
 .nav-connect:hover {
