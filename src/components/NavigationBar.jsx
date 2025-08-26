@@ -2,7 +2,6 @@ import React from 'react'
 import './NavigationBar.css'
 import { FaGithub, FaSun, FaMoon } from "react-icons/fa";
 import { IoHomeSharp } from "react-icons/io5";
-import { SiGoogledocs } from "react-icons/si";
 import { BiSolidContact } from "react-icons/bi";
 import { FaProjectDiagram } from "react-icons/fa";
 import { FaTools } from "react-icons/fa";
@@ -30,7 +29,6 @@ function NavigationBar({ darkMode, setDarkMode }) {
                 <Link to="https://github.com/khushi23-crypto/" className='menu-circle'><FaCodeBranch />&nbsp;Open Source</Link>
                 <Link to="/skills" className='menu-circle'><FaTools />&nbsp;Skills</Link>
                 <Link to="/projects" className='menu-circle'><FaProjectDiagram />&nbsp;Projects</Link>
-                <Link to="/resume" className='menu-circle'><SiGoogledocs />&nbsp;Resume</Link>
                 <Link to="/achievements" className='menu-circle'><FaTrophy />&nbsp;Achievements</Link>
                 <Link to="/about" className='menu-circle'><FiInfo /> &nbsp;About</Link>
                 <Link to="/contact" className='menu-circle'><BiSolidContact />&nbsp;Contact</Link>

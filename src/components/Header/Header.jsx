@@ -4,6 +4,9 @@ import Photo from '../../images/my photo1.jpg'
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import Resume from 'C:/Users/LENOVO/personalportfolio/src/images/newKajal.pdf'
+import { SiGoogledocs } from "react-icons/si";
+
 
 function Header({ darkMode }) {
 
@@ -52,9 +55,9 @@ function Header({ darkMode }) {
             <p className='myself'>I'm a passionate Web Designer and Developer with a strong foundation in creating modern, responsive, and user-friendly websites. Currently, I’m pursuing my Bachelor of Technology in Information Technology at Rajkiya Engineering College, Azamgarh (2022-2026).</p>
           </div>
           <div className="flex">
-            <Link to='/resume' className={`openresume ${darkMode ? 'openresume-light' : 'openresume-dark'}`}>
-              Open Resume&nbsp;<MdOutlineArrowOutward />
-            </Link>
+            <a href={Resume} className={`openresume ${darkMode ? 'openresume-light' : 'openresume-dark'}`}>
+             <SiGoogledocs />&nbsp; Open Resume &nbsp;<MdOutlineArrowOutward />
+            </a>
             <Link to="/contact" className={`nav-connect ${darkMode ? 'nav-connect-light' : 'nav-connect-dark'}`}>
               Connect With Me
             </Link>
